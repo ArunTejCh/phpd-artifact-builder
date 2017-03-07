@@ -15,7 +15,7 @@ CPP_DRIVER_LOCATION="http://downloads.datastax.com/cpp-driver/ubuntu/14.04/cassa
 
 CPP_DEV_DRIVER_LOCATION="http://downloads.datastax.com/cpp-driver/ubuntu/14.04/cassandra/v2.5.0/cassandra-cpp-driver-dev_2.5.0-1_amd64.deb"
 
-wget $LIB_UV_LOCATION $LIB_UV_LOCATION $CPP_DRIVER_LOCATION $CPP_DEV_DRIVER_LOCATION
+wget $LIB_UV_LOCATION $LIB_UV_DEV_LOCATION $CPP_DRIVER_LOCATION $CPP_DEV_DRIVER_LOCATION
 
 sudo add-apt-repository ppa:ondrej/php -y
 
@@ -33,3 +33,14 @@ sudo dpkg -i cassandra-cpp-driver_2.5.0-1_amd64.deb
 
 sudo dpkg -i cassandra-cpp-driver-dev_2.5.0-1_amd64.deb
 
+git clone https://github.com/datastax/php-driver.git
+
+cd php-driver/
+
+git checkout packaging
+
+cp -R ext/packaging ../temp
+
+git checkout $TAG_VERSION
+ 
+cp -R ../temp ext/packaging
