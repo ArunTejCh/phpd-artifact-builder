@@ -23,7 +23,7 @@ sudo apt-get update
 
 sudo apt-get -f install -y
 
-sudo apt-get install git debhelper liblist-moreutils-perl xml2 dh-php
+sudo apt-get install -y git debhelper devscripts liblist-moreutils-perl xml2 dh-php
 
 sudo dpkg -i libuv_1.8.0-1_amd64.deb libuv-dev_1.8.0-1_amd64.deb cassandra-cpp-driver_2.5.0-1_amd64.deb cassandra-cpp-driver-dev_2.5.0-1_amd64.deb
 
