@@ -44,3 +44,14 @@ cp -R ext/packaging ../temp
 git checkout $TAG_VERSION
  
 cp -R ../temp ext/packaging
+
+pwd
+
+cd ext/packaging/
+
+pwd
+
+ls 
+
+./build_deb.sh
+
