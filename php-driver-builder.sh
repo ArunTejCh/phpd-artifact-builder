@@ -41,5 +41,7 @@ cp -R ../temp ext/packaging
 
 cd ext/packaging/
 
+chmod 777 build_deb.sh
+
 ./build_deb.sh
 
